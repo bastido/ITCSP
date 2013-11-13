@@ -97,7 +97,11 @@ public abstract class View {
 	 */
 	protected String addUmgebendeLeerzeichen(String string){
 		int length = 78 - string.length();
-		return addLeerzeichen(length / 2) +string + addLeerzeichen(length / 2);
+		int ausgleich = 0;
+		if (length%2 == 1){
+			ausgleich = 1;
+		}
+		return addLeerzeichen((length / 2) + ausgleich) +string + addLeerzeichen(length / 2);
 	}
 	
 	

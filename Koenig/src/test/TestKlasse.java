@@ -1,5 +1,7 @@
 package test;
 
+import controller.Eingabe;
+
 public class TestKlasse {
 
 	/**
