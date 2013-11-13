@@ -16,7 +16,6 @@ import model.Spieler;
 public abstract class SpielView extends View {
 
 	protected Spieler spieler;
-	protected Spiel spiel;
 	protected String menueUnterZeile = "╠═════════════╩══════════╩══════════════╩═════════════╩═════════════╩══════════╣";
 
 
@@ -54,18 +53,7 @@ public abstract class SpielView extends View {
 	
 
 
-	/**
-	 * Erzeugt eine View-Zeile mit beginnendem und abschließendem ║. Der übergebene String wird zwischen ║ als Menüpunkt eingebettet.
-	 * 
-	 * @param vorlauf
-	 *            Anzahl Leerzeichen vor dem Menübeginn
-	 * @param string
-	 *            der übergebene String
-	 * @return die View-Zeile
-	 */
-	protected String generateZeile( int vorlauf, String string ) {
-		return "║" + addLeerzeichen( vorlauf ) + "║" + string + "║" + addLeerzeichen( 76 - vorlauf - string.length() ) + "║";
-	}
+	
 
 	/**
 	 * Erzeugt eine View-Zeile mit beginnendem und abschließendem ║ und einem Menüpunktabschluss, der bei "beginn" anfängt und bei "ende" endet.
@@ -136,7 +124,7 @@ public abstract class SpielView extends View {
 		ausgabe.add( generateMenüpunktbeginnzeile( beginn, ende ) );
 		
 		for (String menuPunkt: menuPunkte){
-			ausgabe.add(generateZeile(beginn - 1, menuPunkt));
+			ausgabe.add(generateZeile(beginn - 1, menuPunkt, true));
 		}
 		
 		ausgabe.add(generateMenüpunktabschlusszeile(beginn, ende));

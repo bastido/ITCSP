@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import view.MarktplatzView;
+import view.MenuView;
 import view.SpielView;
 import view.View;
 import model.Spiel;
@@ -26,9 +27,9 @@ public class TestView {
 		Spiel spiel = new Spiel();
 		Spieler spieler = new Spieler("Bauer", "Von der Mauer");
 		
-		View view = new MarktplatzView(spiel);
+		View view = new MenuView(spiel);
 		
-		show(view, 0, spieler);
+		show(view, 0, null);
 		
 		
 		

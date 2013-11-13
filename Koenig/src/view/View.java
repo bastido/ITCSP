@@ -12,10 +12,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import model.Spiel;
+
 
 public abstract class View {
 	protected int viewIndex;
 	
+	protected Spiel spiel;
 	protected Map<String, String> generalKeys = new HashMap<>();
 	protected Map<Integer, Map<String, String>> viewkeys = new HashMap<>();
 	protected ArrayList<String> statusAnzeige = new ArrayList<>();
@@ -98,6 +101,7 @@ public abstract class View {
 	protected String addUmgebendeLeerzeichen(String string){
 		int length = 78 - string.length();
 		int ausgleich = 0;
+		//falls der übergebene String ungerade ist, muss für das return ein Ausgleich stattfinden
 		if (length%2 == 1){
 			ausgleich = 1;
 		}
@@ -138,5 +142,24 @@ public abstract class View {
 		}
 		leerzeilen.add(letzteZeile);
 		return leerzeilen;
+	}
+	
+	/**
+	 * Erzeugt eine View-Zeile mit beginnendem und abschließendem ║. Der übergebene String wird zwischen ║ als Menüpunkt eingebettet.
+	 * 
+	 * @param vorlauf
+	 *            Anzahl Leerzeichen vor dem Menübeginn
+	 * @param string
+	 *            der übergebene String
+	 * @param spielView handelt es sich um eine SpielView (true) oder um eine MenuView (false) 
+	 * @return die View-Zeile
+	 */
+	protected String generateZeile( int vorlauf, String string ,boolean spielView) {
+		if (spielView){
+			return "║" + addLeerzeichen( vorlauf ) + "║" + string + "║" + addLeerzeichen( 76 - vorlauf - string.length() ) + "║";
+		}else{
+			return "║" + addLeerzeichen( vorlauf ) + string  + addLeerzeichen( 78 - vorlauf - string.length() ) + "║";
+		}
+		
 	}
 }
