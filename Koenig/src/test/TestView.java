@@ -3,10 +3,7 @@ package test;
 import java.util.ArrayList;
 import java.util.Map;
 
-import view.MarktplatzView;
-import view.MenuView;
-import view.SpielView;
-import view.View;
+import view.*;
 import model.Spiel;
 import model.Spieler;
 
@@ -43,7 +40,6 @@ public class TestView {
 		}
 		view.setViewIndex( viewIndex );
 		ArrayList<String> ausgabe = view.getScreen();
-		// Ausgabemethode fehlt noch
 		for ( String s : ausgabe ) {
 			System.out.println( s );
 		}
