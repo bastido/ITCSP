@@ -119,5 +119,10 @@ public class Spiel
 		
 	}
 	
+	public void aenderePreis()
+	{
+		
+	}
+	
 
 }
