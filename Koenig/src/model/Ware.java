@@ -1,5 +1,14 @@
+/**
+ * 
+ */
 package model;
 
-public enum Ware {
+/**
+ * @author Catherine Eba
+ *
+ */
+public enum Ware
+{
+	KORN, MEHL, DUENGER, SOLDATEN, NEUESOLDATEN;
 
 }
