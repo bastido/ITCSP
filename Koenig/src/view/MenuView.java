@@ -16,7 +16,7 @@ import model.Spiel;
 public class MenuView extends View {
 
 	public MenuView(Spiel spiel){
-		this.spiel = spiel;
+		super(spiel);
 		generateScreens();
 		generateKeys();
 	}

@@ -20,8 +20,7 @@ public abstract class SpielView extends View {
 
 
 	protected SpielView(Spiel spiel) {
-		super();
-		this.spiel = spiel;
+		super(spiel);
 		// keys.put( "F1", "HILFE" );
 		generalKeys.put( "F2", "UEBERSICHT" );
 		generalKeys.put( "F3", "AKTION" );

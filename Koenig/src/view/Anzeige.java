@@ -19,7 +19,7 @@ import model.Spieler;
 
 
 
-public class Ausgabe {
+public class Anzeige {
 
 	private View				currentView;
 	private Map<String, View>	views		= new HashMap<>();
@@ -27,10 +27,16 @@ public class Ausgabe {
 	private Spiel spiel;
 
 
+	/**Zeigt eine View an. Verfügt über ein Historienhandling.
+	 * @param viewString Die View die benutzt werden soll.
+	 * @param viewIndex Der Index, der für die View benutzt werden soll.
+	 * @param spieler Der Spieler, für den die View benutzt werden soll.
+	 * @return Eine Map mit den gültigen Eingaben.
+	 */
 	public Map<String, String> show( String viewString, int viewIndex, Spieler spieler ) {
 		View view = views.get( viewString );
 
-		//falls die "übergebene" View ungleich der letzten View ist oder wenn sie gleich ist und zusatzlich der viewIndex 1 �bergeben wurde, 
+		//falls die "übergebene" View ungleich der letzten View ist oder wenn sie gleich ist und zusätzlich der viewIndex 1 übergeben wurde, 
 		//muss die viewHistory gelöscht werden und currentView gesetzt werden
 		if ( ( view == currentView && viewIndex == 1 ) || ( view != currentView ) ) {
 			this.currentView = view;
@@ -64,6 +70,10 @@ public class Ausgabe {
 
 	}
 	
+	/**Zeigt wieder die vorherige View an.
+	 * @return Eine Map mit den gültigen Eingaben.
+	 * @throws IndexOutOfBoundsException
+	 */
 	public Map<String, String> showPreviousView() throws IndexOutOfBoundsException{
 		String viewString = currentView.getClass().getName();
 		

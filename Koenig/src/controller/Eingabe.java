@@ -9,13 +9,13 @@ import model.Spiel;
 import model.Spieler;
 
 
-import view.Ausgabe;
+import view.Anzeige;
 import view.MarktplatzView;
 import view.View;
 
 public class Eingabe {
 	private Spieler				spieler;
-	private Ausgabe				ausgabe;
+	private Anzeige				ausgabe;
 	private String				eingabe;
 	private Map<String, String>	validKeys	= new HashMap<>();
 	private Spiel spiel;
@@ -23,7 +23,7 @@ public class Eingabe {
 	public Eingabe() {
 		super();
 		spieler = new Spieler( "Herzog", "Andreas" );
-		ausgabe = new Ausgabe();
+		ausgabe = new Anzeige();
 		spiel = new Spiel();
 		// ausgabe.getViews().put( "Marktplatz", MarktplatzView.getInstance() );
 

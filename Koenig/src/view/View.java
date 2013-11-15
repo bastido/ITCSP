@@ -29,6 +29,9 @@ public abstract class View {
 	public abstract void generateKeys();
 	public abstract void generateScreens();
 	
+	protected View(Spiel spiel){
+		this.spiel = spiel;
+	}
 	
 	
 	
