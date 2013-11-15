@@ -5,6 +5,8 @@ import asciikonsole.ASCIIScreenControl;
 public class ClientASCIIScreenControl {
 	ASCIIScreenControl screenControl;
 	
+	
+	
 	public ClientASCIIScreenControl(){
 		screenControl = new ASCIIScreenControl();
 	}

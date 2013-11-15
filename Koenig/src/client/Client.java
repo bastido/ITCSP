@@ -8,11 +8,17 @@ import java.util.Scanner;
 
 
 public class Client {
+	private ClientASCIIScreenControl clientScreen = new ClientASCIIScreenControl();
+	
 	public void start() {
 		Socket serverSocket;
 		
+//		clientScreen.command("");
+		//clientScreen ersetzt Syso
 		System.out.println("Bitte geben Sie die Serveradresse ein: ");
 		
+		
+		//String adresse = clientScreen.command("");
 		String adresse = Eingabe.get();
 		
 		try {
@@ -22,11 +28,10 @@ public class Client {
 			boolean ende = false;
 			while(!ende) {
 				String steuercode = in.nextLine();
-				if(steuercode.equals("in")) {
-					out.println(Eingabe.get());
-				} else if(steuercode.equals("out")) {
-					System.out.println(in.nextLine());
-				}
+				
+				out.println(clientScreen.command(""));
+					
+				//out.println(Eingabe.get());
 			}
 			serverSocket.close();
 			
