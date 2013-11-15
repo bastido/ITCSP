@@ -7,14 +7,13 @@ public class Spiel
 	
 	private ArrayList<Spieler> spieler = new ArrayList<Spieler>();
 	private Spieler aktuellerSpieler;
-	
+	private Markt markt;
 	
 	public Spiel()
 	{
 		
 	}
-	
-	
+		
 	public void addSpieler(Spieler _spieler)
 	{
 		spieler.add(_spieler);
@@ -26,21 +25,19 @@ public class Spiel
 	}
 	
 	public boolean mahleKorn(int anzahl)
-	{
-		
+	{	
 		return true;
 	}
 	
-	public void erstellenSpieler()
+	public void erstelleSpieler()
 	{
 		
 	}
 	
 	public void setAktuellerSpieler(Spieler spieler)
 	{
-		
+		aktuellerSpieler = spieler;
 	}
-	
 		
 	public ArrayList<Spieler> getSpieler()
 	{
@@ -54,46 +51,39 @@ public class Spiel
 	}
 
 
-	public boolean setzeDuengeEin(int anzahl)
+	public boolean setzeDuengerEin(int anzahl)
 	{
-		
 		return true;
 	}
 	
 	public boolean baueGebaeude(String gebaeudeart, int anzahl)
 	{
-		
 		return true;
 	}
 	
 	public boolean zerstoereGebaeude(String gebaeudeart, int anzahl)
 	{
-		
 		return true;
 	}
 
 
 	public boolean legeNahrungsrationFest(float ration)
 	{
-		
 		return true;
 	}
 	
 	public boolean aendereSteuersatz(int satz)
 	{
-		
 		return true;
 	}
 	
 	public boolean fuehreSabotageDurch(Spieler gegner, String sabotageart, int anzahlSoldaten)
 	{
-		
 		return true;
 	}
 	
 	public boolean entlasseSoldaten(int anzahl)
-	{
-		
+	{	
 		return true;
 	}
 	
