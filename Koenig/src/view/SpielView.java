@@ -40,7 +40,7 @@ public abstract class SpielView extends View {
 	protected void createStatusAnzeige( Spieler spieler ) {
 //		statusAnzeige.add( "╔══════════════════════════════════════════════════════════════════════════════╗" );
 		statusAnzeige.add( ersteZeile );
-		statusAnzeige.add( "║" + addUmgebendeLeerzeichen( spieler.getTitel() + " " + spieler.getName() ) + "║" );
+		statusAnzeige.add( "║" + addUmgebendeLeerzeichen( spieler.getStufe()+ " " + spieler.getName() ) + "║" );
 		statusAnzeige.add( "╠══════════════════════════════════════════════════════════════════════════════╣" );
 		statusAnzeige.add( "║Ländereien: "+addVoranstehendeLeerzeichen( "XXX", 3 ) +"  Felder: "+addVoranstehendeLeerzeichen( "XX", 3 )+"  Mühlen: "+addVoranstehendeLeerzeichen( "XX", 3 )+"  Speicher(Kapazität): "+addVoranstehendeLeerzeichen( "XX", 3 )+ "("+addVoranstehendeLeerzeichen( "XXX", 4 )+")     ║");
 		statusAnzeige.add( "║Einwohner: "+addVoranstehendeLeerzeichen( "XXX", 3 ) +" Soldaten: "+addVoranstehendeLeerzeichen( "XXX", 3 ) +" Korn: "+addVoranstehendeLeerzeichen( "XXX", 3 ) +" Mehl: "+addVoranstehendeLeerzeichen( "XXX", 3 ) +" Dünger: "+addVoranstehendeLeerzeichen( "XXX", 3 ) +" Gold: "+addVoranstehendeLeerzeichen( "XXX", 4 ) +"       ║" );
