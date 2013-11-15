@@ -6,6 +6,8 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Scanner;
 
+import asciikonsole.ClientASCIIScreenControl;
+
 
 public class Client {
 	private ClientASCIIScreenControl clientScreen = new ClientASCIIScreenControl();

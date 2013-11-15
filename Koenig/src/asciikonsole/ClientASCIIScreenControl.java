@@ -1,6 +1,5 @@
-package client;
+package asciikonsole;
 
-import asciikonsole.ASCIIScreenControl;
 
 public class ClientASCIIScreenControl {
 	ASCIIScreenControl screenControl;
