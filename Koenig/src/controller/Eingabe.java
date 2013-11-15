@@ -25,7 +25,6 @@ public class Eingabe {
 		spieler = new Spieler( "Herzog", "Andreas" );
 		ausgabe = new Anzeige();
 		spiel = new Spiel();
-		// ausgabe.getViews().put( "Marktplatz", MarktplatzView.getInstance() );
 
 	}
 
