@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class Spieler {
-	
 	
 	private String name;
 	private String titel;
@@ -26,6 +26,7 @@ public class Spieler {
 	private int zufriedenheit;
 	private boolean titelErworben;
 	private int saettigungsgrad;
+	private ArrayList<String> rundenMeldungen = new ArrayList<>();
 	
 	public Spieler(String name, String titel){
 		this.name = name;
@@ -176,9 +177,6 @@ public class Spieler {
 		return zufriedenheit;
 		
 	}
-	
-	
-	
 	
 	
 }
