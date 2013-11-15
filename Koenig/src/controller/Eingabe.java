@@ -22,7 +22,7 @@ public class Eingabe {
 
 	public Eingabe() {
 		super();
-		spieler = new Spieler( "Herzog", "Andreas" );
+		spieler = new Spieler( "Herzogin", "Andrea" );
 		ausgabe = new Anzeige();
 		spiel = new Spiel();
 		//testen
