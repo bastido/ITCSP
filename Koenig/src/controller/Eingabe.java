@@ -25,6 +25,8 @@ public class Eingabe {
 		spieler = new Spieler( "Herzogin", "Andrea" );
 		ausgabe = new Anzeige();
 		spiel = new Spiel();
+		
+		
 
 	}
 
